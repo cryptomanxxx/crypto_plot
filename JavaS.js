@@ -10,7 +10,6 @@ function GetData() {
   var url = "https://min-api.cryptocompare.com/data/top/mktcapfull?limit=100&tsym=USD&api_key=" + ApiKey;
 
   $.get(url, callback1);
-
 }
 
 
@@ -27,7 +26,6 @@ function callback1(x) {
     el.value = y[i].CoinInfo.Name;
     select.appendChild(el);
   }
-
 }
 
 
@@ -52,8 +50,7 @@ function callback2(x) {
   }
 
   Plot(D1, D2);
-
-};
+}
 
 
 function Plot(xxx, yyy) {
@@ -83,6 +80,5 @@ function Plot(xxx, yyy) {
   };
 
   Plotly.newPlot('mydiv', data, layout, { displayModeBar: false });
-
 }
 
